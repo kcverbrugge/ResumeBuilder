@@ -1,0 +1,82 @@
+% === Packages ===
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip} % no indents, adds space between paragraphs
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage[
+  colorlinks=false,
+  pdfborder={0 0 1}
+]{hyperref}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{import}       % fix subdirectory input/output issues 
+\usepackage{setspace}
+\usepackage{graphicx}   %used for putting images in the pdf
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{fontawesome5}
+
+\definecolor{mavRed}{RGB}{134,0,55}
+
+% === tcolorbox Border Color Settings ===
+\tcbset{
+  on line,
+  box align=base,
+  colback=mavRed!60,
+  colframe=black,     % border color
+  boxsep=5pt,
+  left=5pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt,
+  sharp corners
+}
+
+% === resumeList Settings ===
+\newlist{resumelist}{itemize}{1}
+\setlist[resumelist,1]{
+    left=0em,
+    label=\textbullet,
+    topsep=-6pt,
+    after=\vspace{0.2em},
+    partopsep=0pt,
+    itemsep=0pt,
+    parsep=0pt
+}
+
+% === Font ===
+\setmainfont{TeX Gyre Heros}   % requires fontspec and XeLaTeX or LuaLaTeX
+
+% === Section Title Formatting ===
+\titleformat{\section}{\large\bfseries\color{black}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1em}{0.5em} %{left}{above}{below}
+
+% === fbox Formatting ===
+\setlength{\fboxrule}{1pt}
+\setlength{\fboxsep}{0pt}
+
+% === Custom Resume Commands ===
+\newcommand{\resumeSubheading}[4]{
+    \noindent\textbf{#1} \hfill #2\\
+    \textit{#3} \hfill \textit{#4}
+}
+
+\newcommand{\resumeJobTitleDate}[3]{
+    \noindent\textbf{#1} \hfill #2\\
+    \noindent\textit{#3}
+}
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand{\bigsection}[1]{
+    \section*{\Large\bfseries #1}
+}
+
+\newcommand{\circleimage}[2][2cm]{
+  \begin{tikzpicture}
+    \clip (0,0) circle ({0.5*#1});
+    \node at (0,0) {\includegraphics[width=#1]{#2}};
+    \draw[line width = 1.5pt, black] (0,0) circle ({0.5*#1});
+  \end{tikzpicture}
+}

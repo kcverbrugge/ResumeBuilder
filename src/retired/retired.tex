@@ -1,0 +1,10 @@
+\begin{minipage}[t]{0.22\textwidth}
+    \makebox[\textwidth][c]{\raisebox{-1\height}{\circleimage[0.8\linewidth]{../shared/assets/vietnamMountain.JPG}}}
+\end{minipage}
+\newcommand{\circleimage}[2][2cm]{
+  \begin{tikzpicture}
+    \clip (0,0) circle ({0.5*#1});
+    \node at (0,0) {\includegraphics[width=#1]{#2}};
+    \draw[line width = 1.5pt, black] (0,0) circle ({0.5*#1});
+  \end{tikzpicture}
+}

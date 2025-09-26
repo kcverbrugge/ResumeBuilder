@@ -1,29 +1,43 @@
 {
   "latex-workshop.latex.tools": [
     {
-      "name": "xelatex",
+      "name": "xelatex (resume)",
       "command": "xelatex",
       "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "-output-directory=../output",
-        "%DOC%"
+        "-output-directory=../../resumeOutput",
+        "/home/kver/projects/ResumeBuilder/src/resume/main.tex"
+      ]
+    },
+    {
+      "name": "xelatex (references)",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-output-directory=../../referencesOutput",
+        "/home/kver/projects/ResumeBuilder/src/listOfReferences/main.tex"
       ]
     }
   ],
   "latex-workshop.latex.recipes": [
     {
       "name": "xelatex",
-      "tools": ["xelatex"]
+      "tools": ["xelatex (resume)", "xelatex (references)"]
     }
   ],
-  "latex-workshop.latex.outDir": "../output",
+  // "latex-workshop.latex.outDir": "../output",
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof",
     "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg",
     "*.glg", "*.glo", "*.gls", "*.fls", "*.log", "*.fdb_latexmk",
     "*.snm", "*.nav"
   ],
-  "latex-workshop.latex.clean.enabled": true
+  // "latex-workshop.latex.outDir": "../../resumeOutput",
+  "latex-workshop.latex.clean.enabled": true,
+  "latex-workshop.latex.recipe.default": "xelatex",
+  "latex-workshop.latex.build.rootfileInStatus": true
 }

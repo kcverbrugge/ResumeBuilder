@@ -10,20 +10,22 @@
 ]{hyperref}
 \usepackage{titlesec}
 \usepackage{multicol}
-\usepackage{import}       % fix subdirectory input/output issues 
 \usepackage{setspace}
 \usepackage{graphicx}   %used for putting images in the pdf
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
 \usepackage{fontawesome5}
 
+% === Color Definitions ===
+\definecolor{cloudburst}{RGB}{30, 41, 68}
+\definecolor{everglade}{RGB}{30, 68, 37}
 \definecolor{mavRed}{RGB}{134,0,55}
 
 % === tcolorbox Border Color Settings ===
 \tcbset{
   on line,
   box align=base,
-  colback=mavRed!60,
+  colback=everglade!80,
   colframe=black,     % border color
   boxsep=5pt,
   left=5pt,
@@ -36,13 +38,13 @@
 % === resumeList Settings ===
 \newlist{resumelist}{itemize}{1}
 \setlist[resumelist,1]{
-    left=0em,
-    label=\textbullet,
-    topsep=-6pt,
-    after=\vspace{0.2em},
-    partopsep=0pt,
-    itemsep=0pt,
-    parsep=0pt
+  left=0em,
+  label=\textbullet,
+  topsep=-6pt,
+  after=\vspace{0.2em},
+  partopsep=0pt,
+  itemsep=0pt,
+  parsep=0pt
 }
 
 % === Font ===
@@ -58,13 +60,13 @@
 
 % === Custom Resume Commands ===
 \newcommand{\resumeSubheading}[4]{
-    \noindent\textbf{#1} \hfill #2\\
-    \textit{#3} \hfill \textit{#4}
+  \noindent\textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}
 }
 
 \newcommand{\resumeJobTitleDate}[3]{
-    \noindent\textbf{#1} \hfill #2\\
-    \noindent\textit{#3}
+  \noindent\textbf{#1} \hfill #2\\
+  \noindent\textit{#3}
 }
 
 \newcommand{\resumeItem}[1]{\item\small{#1}}
@@ -73,10 +75,8 @@
     \section*{\Large\bfseries #1}
 }
 
-\newcommand{\circleimage}[2][2cm]{
-  \begin{tikzpicture}
-    \clip (0,0) circle ({0.5*#1});
-    \node at (0,0) {\includegraphics[width=#1]{#2}};
-    \draw[line width = 1.5pt, black] (0,0) circle ({0.5*#1});
-  \end{tikzpicture}
+\newcommand{\mycolorbox}[1]{
+  \begin{tcolorbox}[width=\textwidth, boxrule=1pt]
+    #1
+  \end{tcolorbox}
 }

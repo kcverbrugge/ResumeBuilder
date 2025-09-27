@@ -40,5 +40,9 @@
 # debug information files
 *.dwo
 
-#output folder
-output/
+# output folders
+resume/output/
+references/output/
+
+# Confidential Contact information
+contacts.tex

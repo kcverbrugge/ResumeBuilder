@@ -1,33 +1,3 @@
-# Repo Tree
-.
-├── LICENSE
-├── README.md
-├── description.md
-├── generateREADME.sh
-├── preamble.tex
-├── references
-│   └── src
-│       ├── main.tex
-│       ├── sections
-│       │   ├── header.tex
-│       │   └── sampleContacts.tex
-│       └── style.cls
-├── resume
-│   └── src
-│       ├── main.tex
-│       ├── sections
-│       │   ├── contactInfo.tex
-│       │   ├── education.tex
-│       │   ├── experience.tex
-│       │   ├── otherExperience.tex
-│       │   ├── projects.tex
-│       │   └── skills.tex
-│       └── style.cls
-├── retired
-│   └── retired.tex
-└── setup.sh
-
-8 directories, 19 files
 # Purpose of this Project
 I was tired of tinkering with Microsoft Word formatting and decided that writing something in LaTeX would be more straightforward. This builder makes it so the resume can be customized to my needs as my career moves forward. It allows me to change themes and also express some of the concepts I've learned throughout college.
 

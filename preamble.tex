@@ -9,6 +9,7 @@
   pdfborder={0 0 1}
 ]{hyperref}
 \usepackage{titlesec}
+\usepackage{import}
 \usepackage{multicol}
 \usepackage{setspace}
 \usepackage{graphicx}   %used for putting images in the pdf
@@ -25,7 +26,7 @@
 \tcbset{
   on line,
   box align=base,
-  colback=everglade!80,
+  colback=cloudburst!80,
   colframe=black,     % border color
   boxsep=5pt,
   left=5pt,
@@ -77,6 +78,37 @@
 
 \newcommand{\mycolorbox}[1]{
   \begin{tcolorbox}[width=\textwidth, boxrule=1pt]
-    #1
+  #1
   \end{tcolorbox}
+}
+
+\newcommand{\centerheading}[1]{
+  \bigsection{\makebox[\textwidth][c]{#1}}
+}
+
+\newcommand{\phoneref}[1]{
+  \href{tel:#1}{#1}
+}
+
+\newcommand{\emailref}[1]{
+  \href{mailto:#1}{#1}
+}
+
+\newcommand{\gpsref}[2]{
+  \href{#1}{#2}
+}
+
+\newcommand{\titlebox}[0]{
+  \mycolorbox{
+    \begin{center}
+    \centerheading{Kyle C. Verbrugge}
+        \begin{tabular}{ll}
+            \faEnvelope & \href{mailto:kcverbrugge@gmail.com}{kcverbrugge@gmail.com}\\
+            \faPhoneSquare & \href{tel:17204156630}{(720) 415-6630}\\
+            \faGithub & \href{https://github.com/kcverbrugge}{kcverbrugge}\\
+            \faMapPin & \href{https://www.google.com/maps/place/Westminster,+CO/@39.8933331,-105.076659,12z/data=!3m1!4b1!4m6!3m5!1s0x876b881ea2597f9f:0xa8cf57703f744417!8m2!3d39.8366528!4d-105.0372046!16zL20vMHI4cDU?entry=ttu\&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw\%3D\%3D}{Westminster, CO 80031}
+        \end{tabular}
+    \end{center}
+  }
+  \vspace{-19pt}
 }

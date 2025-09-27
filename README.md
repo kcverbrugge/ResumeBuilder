@@ -1,4 +1,5 @@
 # Repo Tree
+```n
 .
 ├── LICENSE
 ├── README.md
@@ -28,6 +29,7 @@
 └── setup.sh
 
 8 directories, 19 files
+```
 # Purpose of this Project
 I was tired of tinkering with Microsoft Word formatting and decided that writing something in LaTeX would be more straightforward. This builder makes it so the resume can be customized to my needs as my career moves forward. It allows me to change themes and also express some of the concepts I've learned throughout college.
 
